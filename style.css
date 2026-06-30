@@ -1,0 +1,202 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+backdrop-filter:blur(20px);
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+#hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:100px;
+position:relative;
+}
+
+.hero-content{
+width:50%;
+z-index:10;
+}
+
+.hero-content h1{
+font-size:5rem;
+background:linear-gradient(
+90deg,
+#00ffff,
+#ff00ff,
+#ffff00,
+#00ff00
+);
+-webkit-background-clip:text;
+color:transparent;
+animation:glow 4s infinite;
+}
+
+.hero-content h2{
+font-size:2rem;
+margin:20px 0;
+}
+
+.hero-content p{
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+button{
+padding:15px 30px;
+margin-right:15px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:linear-gradient(
+45deg,
+#ff00ff,
+#00ffff
+);
+color:white;
+font-weight:bold;
+transition:0.4s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#three-container{
+width:50%;
+height:600px;
+}
+
+.section{
+padding:120px 10%;
+text-align:center;
+}
+
+.section h2{
+font-size:3rem;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+padding:40px;
+border-radius:25px;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.08);
+transition:.5s;
+font-size:1.5rem;
+}
+
+.card:hover{
+transform:
+translateY(-15px)
+rotateX(10deg);
+box-shadow:
+0 0 30px cyan,
+0 0 60px magenta;
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,
+select{
+padding:15px;
+border:none;
+border-radius:10px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+}
+
+#cursor{
+width:20px;
+height:20px;
+border:2px solid cyan;
+border-radius:50%;
+position:fixed;
+pointer-events:none;
+z-index:9999;
+transform:translate(-50%,-50%);
+}
+
+#particles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+background:
+radial-gradient(circle,#00ffff33 1px,transparent 1px);
+background-size:40px 40px;
+animation:moveBg 15s linear infinite;
+}
+
+@keyframes moveBg{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(100px);
+}
+}
+
+@keyframes glow{
+
+0%{
+filter:drop-shadow(0 0 10px cyan);
+}
+
+50%{
+filter:drop-shadow(0 0 30px magenta);
+}
+
+100%{
+filter:drop-shadow(0 0 10px cyan);
+}
+}
